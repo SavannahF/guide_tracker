@@ -24,7 +24,6 @@ VALUES
     ('Marketing Manager', 50000, 6),
     ('Web Manager', 50000, 7);
 
-
 INSERT INTO guide
     (first_name, last_name, role_id, manager_id)
 VALUES 
@@ -35,4 +34,4 @@ VALUES
     ('David', 'Ruiz', 7, 4),
     ('Marisa', 'Sobol', 8, 1),
     ('Savannah', 'Fortson', 9, 1);
-    
+
