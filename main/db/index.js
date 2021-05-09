@@ -7,10 +7,9 @@ class DB {
 
     findAllGuides() {
         return this.connection.query(
-            "SELECT guide.id, guide.first_name, guide.last_name, role.title, department.name AS department, role.salary, CONCAT(manager.first_name, ' ',manager.last_name) AS manager FROM guide LEFT JOIN role on guide.role_id = role.id LEFT JOIN department on role.department_id = department.id LEFT JOIN guide manager on manager.id = guide.manager_id;"
+            "SELECT guide.id, guide.first_name, guide.last_name, role.title, department.name AS department, role.wage, CONCAT(manager.first_name, ' ',manager.last_name) AS manager FROM guide LEFT JOIN role on guide.role_id = role.id LEFT JOIN department on role.department_id = department.id LEFT JOIN guide manager on manager.id = guide.manager_id;"
         );
     }
-}
 
 findAllPossibleManagers(guideId) {
     return this.connection.query(
@@ -19,4 +18,4 @@ findAllPossibleManagers(guideId) {
     );
 }
 
-// end
+}
