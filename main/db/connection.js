@@ -1,6 +1,9 @@
+// DO NOT CLICK "convert to ES6 module"!
+// .env
 require('dotenv').config()
 
 const util = require("util");
+// MySQL Package
 const mysql = require("mysql");
 
 const connection = mysql.createConnection({
@@ -11,7 +14,9 @@ const connection = mysql.createConnection({
     database: process.env.DB_DATABASE
 });
 
-connection.connect();
+connection.connect(function(err){
+    if(err) throw err;
+});
 
 connection.query = util.promisify(connection.query);
 
