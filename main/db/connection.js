@@ -10,7 +10,7 @@ const connection = mysql.createConnection({
     host:"localhost",
     user: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
-    // using "guides" because my computer uses that to refer to "employee"
+    // using "guides" because my company uses that to refer to "employee"
     database: process.env.DB_DATABASE
 });
 
