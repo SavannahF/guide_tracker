@@ -2,6 +2,9 @@
 
 ## Description
 
+The Guide Tracker application is to be used for maintaining a current list of employees ("guides"), departments, and roles. Info pertaining to each guide includes their name, department, role, hourly wage or salary rate, and manager, if applicable. 
+
+This application uses MySQL, Node.js, and Inquirer. 
 
 <!-- Published URL -->
 
@@ -17,8 +20,23 @@ Screen Shots can be found below:
 ![IMG_TITLE](./assets/IMG)
 
 ## Installation
+[MySQL](https://www.npmjs.com/package/mysql)
+[Node.js](https://nodejs.org/en/)
+[InquirerJs](https://www.npmjs.com/package/inquirer/v/0.2.3)
+[console.table](https://www.npmjs.com/package/console.table)
 
+1. Clone this repository on a local machine to use this application, or download the zip and navigate to the repository folder and run the code using a program such as Visual Studio Code. 
 
+2. Run the following command to install necessary dependencies: 
+
+```
+npm i
+```
+3. Begin the application by running the following command: 
+
+```
+node index.js
+```
 ## Instructions
 
 
