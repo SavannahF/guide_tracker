@@ -4,9 +4,28 @@ class DB {
         this.connection = connection;
     }
 
+    // View all guides and guide details : JOIN guide, role, and department tables. 
     findAllGuides() {
         return this.connection.query(
-            "SELECT guide.id, guide.first_name, guide.last_name, role.title, department.name AS department, role.wage, CONCAT(manager.first_name, ' ',manager.last_name) AS manager FROM guide LEFT JOIN role on guide.role_id = role.id LEFT JOIN department on role.department_id = department.id LEFT JOIN guide manager on manager.id = guide.manager_id;"
+            `SELECT 
+                guide.id,
+                guide.first_name,
+                guide.last_name,
+                role.title,
+                department.name AS department,
+                role.wage,
+                CONCAT(manager.first_name, ' ',manager.last_name) AS manager
+            FROM
+                guide
+            LEFT JOIN
+                role ON guide.role_id = role.id
+            LEFT JOIN
+                department ON role.department_id = department.id
+            LEFT JOIN
+                guide manager ON manager.id = guide.manager_id;
+            `
+            // ORDER BY
+            //     guide.id;
         );
     }
 
