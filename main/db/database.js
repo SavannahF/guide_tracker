@@ -3,6 +3,7 @@ class DB {
     constructor(connection) {
         this.connection = connection;
     }
+// View departments, roles, employees
 
     // View all guides and guide details : JOIN guide, role, and department tables. 
     findAllGuides() {
@@ -28,11 +29,19 @@ class DB {
             //     guide.id;
         );
     }
-
-findAllPossibleManagers(guideId) {
-    return this.connection.query(
-        "SELECT id, first_name, last_name FROM guide WHERE id ≠ ?",
-        guideId
+    // 
+    findAllPossibleManagers(guideId) {
+        return this.connection.query(
+            `SELECT
+                id, 
+                first_name, 
+                last_name 
+            FROM 
+                guide 
+            WHERE 
+                id ≠ ?,
+            guideId
+            `
     );
 }
 
