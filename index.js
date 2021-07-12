@@ -84,7 +84,7 @@ const init = () => {
     });
 };
 
-//Displays a table with the departments id & name
+//Table w/ department names
 const viewDepartments = () => {
   connection.query("SELECT * FROM departments;", (err, res) => {
     if (err) throw err;
@@ -94,7 +94,7 @@ const viewDepartments = () => {
   console.log(`DEPARTMENTS:`);
 };
 
-//Displays a table with the roles
+// Table w/ rows
 const viewRole = () => {
   connection.query(
     `SELECT role.id AS "Role ID",role.title AS "Role", CONCAT(employee.first_name, " ", employee.last_name) AS "Employee Name", role.salary AS "Salary", departments.department_name AS "Department" FROM employee LEFT JOIN role ON (role.id = employee.role_id)
@@ -105,10 +105,10 @@ const viewRole = () => {
       init();
     }
   );
-  console.log(`EMPLOYEES ROLES:`);
+  console.log(`EMPLOYEE ROLES:`);
 };
 
-//Displays a table with the employee id, full name, role, & manager id
+//Table with employee id, first + last name (full name), role, & manager id
 const viewEmployees = () => {
   connection.query(
     `SELECT employee.id AS "ID", CONCAT(employee.first_name, " ", employee.last_name) AS "Employee Name", departments.department_name AS "Department", role.title AS "Role", role.salary AS "Salary", employee.manager_id As "Manager ID" FROM employee LEFT JOIN role ON (employee.role_id = role.id)
@@ -170,7 +170,7 @@ const addRole = () => {
         },
         {
           type: "rawlist",
-          message: "Which Department the new Role belongs to?",
+          message: "Which Department does the new Role belong to?",
           name: "roleDepartment",
           //It pulls all the departments by name from the db
           choices() {
@@ -227,7 +227,7 @@ const addEmployee = () => {
         },
         {
           type: "rawlist",
-          message: "What is the new Employee role?",
+          message: "What is the new Employee's role?",
           name: "roleID",
           //It pulls all the roles by name from the db
           choices() {
@@ -285,7 +285,7 @@ const addEmployee = () => {
                     (err) => {
                       if (err) throw err;
                       console.log(
-                        `The new Employee ${response.firstName} was added successfully!!`
+                        `Employee ${response.firstName} was added successfully!!`
                       );
                       viewEmployees();
                     }
