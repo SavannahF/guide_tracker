@@ -1,7 +1,5 @@
- use guides;
-
- INSERT INTO department
-    (name)
+use guides;
+INSERT INTO departments (department_name)
 VALUES
     ("Guides"),
     ("Store Managers"),
@@ -12,26 +10,26 @@ VALUES
     ("eCommerce");
 
 INSERT INTO role
-    (title, wage, department_id)
+    (title, salary, department_id)
 VALUES
-    ('Guide', 10, 1),
-    ('Lead Guide', 15, 1),
-    ('Assistant Store Manager', 20, 2),
-    ('Store Manager', 50000, 2),
-    ('General Manager', 100000, 3),
-    ('Inventory Guru', 100000, 4),
-    ('Special Ops', 50000, 5),
-    ('Marketing Manager', 50000, 6),
-    ('Web Manager', 50000, 7);
+    ('Guide', 10, 001),
+    ('Lead Guide', 15, 001),
+    ('Assistant Store Manager', 20, 002),
+    ('Store Manager', 50000, 002),
+    ('General Manager', 100000, 003),
+    ('Inventory Guru', 100000, 004),
+    ('Special Ops', 50000, 004),
+    ('Marketing Manager', 50000, 004),
+    ('Web Manager', 50000, 004);
 
 INSERT INTO guide
-    (first_name, last_name, role_id, manager_id)
-VALUES 
-    ('John', 'Sloan', 1, NULL),
-    ('Caroline', 'Sloan', 2, 1),
-    ('Dan', 'Heller', 2, 1), 
-    ('Glenn', 'Orton', 6, 1),
-    ('David', 'Ruiz', 7, 4),
-    ('Marisa', 'Sobol', 8, 1),
-    ('Savannah', 'Fortson', 9, 1);
+    employee (first_name, last_name, role_id)
+VALUES
+    ('John', 'Sloan', 1),
+    ('Caroline', 'Sloan', 2),
+    ('Dan', 'Heller', 2), 
+    ('Glenn', 'Orton', 6),
+    ('David', 'Ruiz', 7),
+    ('Marisa', 'Sobol', 8),
+    ('Savannah', 'Fortson', 9);
 
