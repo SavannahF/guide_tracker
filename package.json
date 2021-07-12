@@ -1,7 +1,26 @@
 {
+  "name": "guide_tracker",
+  "version": "1.0.0",
+  "description": "## Description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SavannahF/guide_tracker.git"
+  },
+  "author": "Savannah Fortson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SavannahF/guide_tracker/issues"
+  },
+  "homepage": "https://github.com/SavannahF/guide_tracker#readme",
   "dependencies": {
-    "dotenv": "^9.0.0",
-    "inquirer": "^8.0.0",
+    "inquirer": "^8.1.1",
+    "chalk": "^4.1.1",
+    "figlet": "^1.5.0",
+    "console.table": "^0.10.0",
     "mysql": "^2.18.1"
   }
 }

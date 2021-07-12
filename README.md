@@ -43,8 +43,8 @@ node index.js
 
 ## Websites
 
-- Github: https://github.com/SavannahF//
-- Deployed: https://SavannahF.github.io//
+- Github: https://github.com/SavannahF/
+- Deployed: https://SavannahF.github.io/
 
 ## License
 
