@@ -3,6 +3,7 @@ const inquirer = require("inquirer");
 const chalk = require("chalk");
 const figlet = require("figlet");
 require("console.table");
+require('dotenv').config();
 
 
 // create the connection information for the sql database
