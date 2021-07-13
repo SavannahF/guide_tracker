@@ -22,8 +22,8 @@ VALUES
     ('Marketing Manager', 50000, 004),
     ('Web Manager', 50000, 004);
 
-INSERT INTO guide
-    employee (first_name, last_name, role_id)
+INSERT INTO employee
+    (first_name, last_name, role_id)
 VALUES
     ('John', 'Sloan', 1),
     ('Caroline', 'Sloan', 2),
