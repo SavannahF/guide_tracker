@@ -52,7 +52,7 @@ node index.js
 ## Websites
 
 -   [GitHub Repository](https://github.com/SavannahF/guide_tracker)
--   [Video Walkthrough]()
+-   [Video Walkthrough](https://youtu.be/E3GO7YrhGmk)
 
 ## Contributions
 
