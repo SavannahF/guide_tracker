@@ -2,49 +2,61 @@
 
 ## Description
 
-The Guide Tracker application is to be used for maintaining a current list of employees ("guides"), departments, and roles. Info pertaining to each guide includes their name, department, role, hourly wage or salary rate, and manager, if applicable. 
+The Employee Tracker is a command-line application used for maintaining a current list of employees, departments, and roles. Info pertaining to each guide includes their name, department, role, hourly wage or salary rate, and manager, if applicable.
 
-This application uses MySQL, Node.js, and Inquirer. 
+This application uses MySQL, Node.js, and Inquirer.
 
-<!-- Published URL -->
+## Table of Contents
 
-https://SavannahF.github.io//
+-   [Installation](#installation)
 
-Screen Shots can be found below:
+-   [Technology](#technology)
 
-<!-- INSERT FINAL SCREENSHOTS HERE -->
+-   [Instructions](#instructions)
 
-![IMG_TITLE](./assets/IMG)
-![IMG_TITLE](./assets/IMG)
-![IMG_TITLE](./assets/IMG)
-![IMG_TITLE](./assets/IMG)
+-   [Websites] (#websites)
+
+-   [Contributions](#contributions)
+
+-   [License](#license)
 
 ## Installation
-[MySQL](https://www.npmjs.com/package/mysql)
-[Node.js](https://nodejs.org/en/)
-[InquirerJs](https://www.npmjs.com/package/inquirer/v/0.2.3)
-[console.table](https://www.npmjs.com/package/console.table)
 
-1. Clone this repository on a local machine to use this application, or download the zip and navigate to the repository folder and run the code using a program such as Visual Studio Code. 
+1. Download the files in this repo.
+2. Open in Visual Studios Code.
+3. To install the included dependencies, run:
 
-2. Run the following command to install necessary dependencies: 
-
-```
+```bash
 npm i
 ```
-3. Begin the application by running the following command: 
 
-```
-node index.js
-```
+## Technology
+
+-   JavaScript
+-   Node.js
+-   [InquirerJs](https://www.npmjs.com/package/inquirer/v/0.2.3)
+-   [MySQL](https://www.npmjs.com/package/mysql)
+-   [console.table](https://www.npmjs.com/package/console.table)
+
 ## Instructions
 
+1. Through the terminal in VS Code, run:
 
+```bash
+node index.js
+```
+
+2. Follow the prompts in the command line.
+3. Demo walkthrough video linked below.
 
 ## Websites
 
-- Github: https://github.com/SavannahF/
-- Deployed: https://SavannahF.github.io/
+-   [GitHub Repository](https://github.com/SavannahF/guide_tracker)
+-   [Video Walkthrough]()
+
+## Contributions
+
+The following were contributors to this project: [Savannah L. Fortson](https://github.com/SavannahF)
 
 ## License
 

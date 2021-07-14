@@ -86,7 +86,7 @@ const init = () => {
 
 //Table w/ department names
 const viewDepartments = () => {
-  connection.query("SELECT * FROM departments;", (err, res) => {
+  connection.query("SELECT * FROM department;", (err, res) => {
     if (err) throw err;
     console.table(res);
     init();
@@ -97,8 +97,8 @@ const viewDepartments = () => {
 // Table w/ rows
 const viewRole = () => {
   connection.query(
-    `SELECT role.id AS "Role ID",role.title AS "Role", CONCAT(employee.first_name, " ", employee.last_name) AS "Employee Name", role.salary AS "Salary", departments.department_name AS "Department" FROM employee LEFT JOIN role ON (role.id = employee.role_id)
-  LEFT JOIN departments ON (departments.id = role.department_id);`,
+    `SELECT role.id AS "Role ID",role.title AS "Role", CONCAT(employee.first_name, " ", employee.last_name) AS "Employee Name", role.salary AS "Salary", department.department_name AS "Department" FROM employee LEFT JOIN role ON (role.id = employee.role_id)
+  LEFT JOIN department ON (department.id = role.department_id);`,
     (err, res) => {
       if (err) throw err;
       console.table(res);
@@ -111,8 +111,8 @@ const viewRole = () => {
 //Table with employee id, first + last name (full name), role, & manager id
 const viewEmployees = () => {
   connection.query(
-    `SELECT employee.id AS "ID", CONCAT(employee.first_name, " ", employee.last_name) AS "Employee Name", departments.department_name AS "Department", role.title AS "Role", role.salary AS "Salary", employee.manager_id As "Manager ID" FROM employee LEFT JOIN role ON (employee.role_id = role.id)
-    LEFT JOIN departments ON (departments.id = role.department_id);`,
+    `SELECT employee.id AS "ID", CONCAT(employee.first_name, " ", employee.last_name) AS "Employee Name", department.department_name AS "Department", role.title AS "Role", role.salary AS "Salary", employee.manager_id As "Manager ID" FROM employee LEFT JOIN role ON (employee.role_id = role.id)
+    LEFT JOIN department ON (department.id = role.department_id);`,
     (err, res) => {
       if (err) throw err;
       console.table(res);
@@ -136,7 +136,7 @@ const addDepartment = () => {
       // when finished prompting, insert the input into the db
       // ? = in mysql is a place holder for a variable
       connection.query(
-        "INSERT INTO departments SET ?",
+        "INSERT INTO department SET ?",
         {
           department_name: response.departmentName,
         },
@@ -154,7 +154,7 @@ const addDepartment = () => {
 //function to Add a Role to the database
 const addRole = () => {
   //getting all items in the departments table from the db
-  connection.query("SELECT * FROM departments", (err, results) => {
+  connection.query("SELECT * FROM department", (err, results) => {
     if (err) throw err;
     inquirer
       .prompt([
@@ -185,7 +185,7 @@ const addRole = () => {
       .then((response) => {
         const chosenDepartment = response.roleDepartment;
         //it obtains the department id
-        connection.query("SELECT * FROM departments", (err, results) => {
+        connection.query("SELECT * FROM department", (err, results) => {
           if (err) throw err;
           let departmentFilter = results.filter((results) => {
             return results.department_name === chosenDepartment;

@@ -1,5 +1,5 @@
 use guides;
-INSERT INTO departments (department_name)
+INSERT INTO department (department_name)
 VALUES
     ("Guides"),
     ("Store Managers"),
@@ -32,4 +32,3 @@ VALUES
     ('David', 'Ruiz', 7),
     ('Marisa', 'Sobol', 8),
     ('Savannah', 'Fortson', 9);
-
